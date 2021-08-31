@@ -1,0 +1,16 @@
+ru/practice/foxjourney/WorldBackground.java
+ ru.practice.foxjourney.WorldBackground
+ru/practice/foxjourney/BuildConfig.java
+ ru.practice.foxjourney.BuildConfig
+ru/practice/foxjourney/WorldView.java
+ ru.practice.foxjourney.WorldView
+ru/practice/foxjourney/WorldActivity.java
+ ru.practice.foxjourney.WorldActivity
+ru/practice/foxjourney/ChestUnit.java
+ ru.practice.foxjourney.ChestUnit
+ru/practice/foxjourney/Unit.java
+ ru.practice.foxjourney.Unit
+ru/practice/foxjourney/Controller.java
+ ru.practice.foxjourney.Controller
+ru/practice/foxjourney/FoxUnit.java
+ ru.practice.foxjourney.FoxUnit
