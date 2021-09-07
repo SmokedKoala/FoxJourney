@@ -13,6 +13,11 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueTrigger.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/StartDialogue.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/Dialogue.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/Sentence.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1xYYzmJEqx7nJaHGVfejJP3ruBw" />
