@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
@@ -11,49 +10,61 @@ public class DialogueManager : MonoBehaviour
     public Button NextSpeech;
     public Text NpcName;
     public Text CurrentSpeech;
-    public GameObject FoxTurn;
+    public GameObject PlayerTurn;
     public GameObject NpcTurn;
-    public string name;
-    public string[] sentences;
-    public bool[] dialogueTurn;
-    private int sentenceNum;
+    
+    public string Name;
+    public Dialogue[] Dialogues;
+    private Queue<string> sentencesQueue;
+    private Queue<bool> turnsQueue;
+    private int dialogueId = 0;
+    
 
-    private void Start()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        NpcName.text = name;
-        sentenceNum = 0;
+        if (dialogueId != 0)
+        {
+            dialogueId = Dialogues[dialogueId].getNext();
+        }
+        sentencesQueue = new Queue<string>(Dialogues[dialogueId].sentences);
+        turnsQueue = new Queue<bool>(Dialogues[dialogueId].dialogueTurn);
+        NpcName.text = Name;
         NextSpeech.onClick.AddListener(() => NextSentence());
+        CurrentSpeech.text = sentencesQueue.Dequeue();
+        turnsQueue.Dequeue();
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         EndDialogue();
+        if (dialogueId == 0)
+        {
+            dialogueId = Dialogues[dialogueId].getNext();
+        }
     }
 
     public void EndDialogue()
     {
         DialogueBox.SetActive(false);
-        NextSpeech.onClick.RemoveListener(() => NextSentence());
-        sentenceNum = 0;
+        NextSpeech.onClick.RemoveAllListeners();
     }
 
     public void NextSentence()
     {
-        if (sentenceNum < sentences.Length)
+        if (sentencesQueue.Count>0)
         {
-            if (dialogueTurn[sentenceNum])
+            if (turnsQueue.Dequeue())
             {
-                FoxTurn.SetActive(true);
+                PlayerTurn.SetActive(true);
                 NpcTurn.SetActive(false);
             }
             else
             {
-                FoxTurn.SetActive(false);
+                PlayerTurn.SetActive(false);
                 NpcTurn.SetActive(true);
             }
 
-            CurrentSpeech.text = sentences[sentenceNum];
-            sentenceNum++;
+            CurrentSpeech.text = sentencesQueue.Dequeue();
         }
         else
         {

@@ -9,14 +9,19 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.10/Runtime/Behaviours/CinemachineCollider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/24599FE2-7761-45D5-8AB7-71516C063D56/de/287d2049/Object.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueTrigger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/StartDialogue.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/Dialogue.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/Sentence.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueTrigger.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Chest/ChestTrigger.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Quest/CompleteQuest.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Chest/OpenChest.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Quest/Quest.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/Dialogue.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" />
     </changedPaths>
   </component>
